@@ -63,7 +63,7 @@ stegoscope <command> <file> [options]
 # Full analysis suite (metadata + strings + hex + entropy + flags + detect + scan)
 stegoscope analyze mystery.png
 
-# Auto mode — same as analyze but adds a ranked suggestion block at the end
+# Auto mode same as analyze but adds a ranked suggestion block at the end
 stegoscope auto mystery.png
 
 # Individual modules
