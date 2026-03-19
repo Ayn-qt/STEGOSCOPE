@@ -137,30 +137,33 @@ stegoscope analyze   mystery.png -v
 ```
 stegoscope/
 │
-├── main.py                  # CLI entry point, argument parser, dispatcher
+├── main.py                      CLI entry point, argument parser, dispatcher
 ├── requirements.txt
 ├── README.md
+├── LICENSE
 │
-├── core/                    # Pure-logic modules (no CLI I/O)
-│   ├── metadata.py          # EXIF, magic bytes, PNG chunks
-│   ├── strings.py           # String extraction & classification
-│   ├── hexview.py           # Hex dump generation
-│   ├── entropy.py           # Shannon entropy, sliding window
-│   ├── flagfinder.py        # CTF flag regex + encoding search
-│   └── utils.py             # Banner, validators, Rich helpers
+├── core/
+│   ├── metadata.py              EXIF, magic bytes, PNG chunks
+│   ├── strings.py               String extraction & classification
+│   ├── hexview.py               Hex dump generation
+│   ├── entropy.py               Shannon entropy, sliding window
+│   ├── flagfinder.py            CTF flag regex + encoding search
+│   └── utils.py                 Banner, validators, Rich helpers
 │
-├── modules/                 # Higher-level analysis modules
-│   ├── binwalk_scan.py      # binwalk subprocess wrapper
-│   ├── stego_detect.py      # LSB, chi-square, WAV, palette checks
-│   └── extractors.py        # Built-in magic-byte carver
+├── modules/
+│   ├── binwalk_scan.py          binwalk subprocess wrapper
+│   ├── stego_detect.py          LSB, chi-square, WAV, palette checks
+│   ├── extractors.py            Built-in magic-byte carver
+│   ├── stego_tools.py           steghide, zsteg, outguess, exiftool wrappers
+│   └── stylesuxx.py             stylesuxx web tool LSB decoder/encoder
 │
-└── commands/                # CLI command handlers (output + routing)
-    ├── analyze.py            # metadata, strings, hex, entropy, flags, run_all
-    ├── detect.py             # stego detection display
-    └── extract.py            # extraction display
+└── commands/
+    ├── analyze.py               metadata, strings, hex, entropy, flags, run_all
+    ├── detect.py                stego detection display
+    ├── extract.py               extraction display
+    └── crack.py                 steghide, crack, zsteg, outguess, stylesuxx, toolkit
 ```
 
----
 
 ## Adding a New Module
 
