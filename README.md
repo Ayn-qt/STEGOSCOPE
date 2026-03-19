@@ -1,4 +1,4 @@
-# 🔬 StegoScope
+#  StegoScope
 
 **CTF Steganography & Digital Forensics Automation Tool**
 
@@ -187,7 +187,3 @@ After running StegoScope, these external tools complement it well:
 | `volatility` | Memory image forensics                | pip install volatility3  |
 
 ---
-
-## License
-
-MIT — free for CTF, educational, and security research use.
